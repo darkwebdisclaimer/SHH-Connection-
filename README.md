@@ -9,6 +9,7 @@ https://wiki.termux.com/wiki/Remote_Access
 ```
 $ apt update && apt upgrade
 - On first prompt, enter Y. On second and third prompt, just press Enter.
+$ pkg install busybox termux-services
 $ pkg install openssh
 - On prompt, enter Y.
 $ sshd
