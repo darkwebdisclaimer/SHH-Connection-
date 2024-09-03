@@ -1,6 +1,24 @@
 # SHH-Connection-
 
 # STEP5a: Install ssh in Termux
+- Refer to the following page for more info
+```
+https://wiki.termux.com/wiki/Remote_Access
+```
+- Open Termux & execute the following commands:
+```
+$ apt update && apt upgrade
+- On first prompt, enter Y. On second and third prompt, just press Enter.
+$ pkg install openssh
+- On prompt, enter Y.
+$ sshd
+$ passwd
+$ whoami
+- Take note of the username. Example: u0_a290
+$ ifconfig
+- Take note of the IP address beside inet. Example: 192.168.1.51
+```
+
 # STEP5b: Connecting to Android via SSH
 - To connect from Windows Gitbash to your Android, we need to setup proper ssh keys.
 - This involves copying your Windows ssh keys to Android.
@@ -33,6 +51,6 @@ and check to make sure that only the key(s) you wanted were added.
 ```
 $ ssh -p 8022 u0_a290@192.168.1.51
 ```
-# STEP6: Optional: Use Putty to connect to SSH from Windows
+
 - To connect to the Android Termux via Putty
 - Make sure to indicate SSH port 8022
