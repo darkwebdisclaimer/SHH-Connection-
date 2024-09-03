@@ -10,9 +10,17 @@ https://wiki.termux.com/wiki/Remote_Access
 $ apt update && apt upgrade
 - On first prompt, enter Y. On second and third prompt, just press Enter.
 $ pkg install busybox termux-services
+- After installation you need to restart session or source this file:
+''source $PREFIX/etc/profile.d/start-services''
+$ sv-enable ftpd
+sv up ftpd
+- FTP server will run on port 8021 in read-only mode.
+If you need to stop server, run $ sv down ftpd.
 $ pkg install openssh
 - On prompt, enter Y.
 $ sshd
+- If you need to stop `sshd`, just kill it's process:
+$ pkill sshd
 $ passwd
 $ whoami
 - Take note of the username. Example: u0_a290
